@@ -4,7 +4,8 @@
 #include <sstream>
 #include "Vector3D.h"
 
-struct Matrix3D {
+struct Matrix3D
+{
 private:
     float n[3][3];
 
@@ -36,7 +37,8 @@ public:
     friend std::ostream &operator<<(std::ostream &, const Matrix3D &);
 };
 
-inline Matrix3D operator+(const Matrix3D &ma, const Matrix3D &mb) {
+inline Matrix3D operator+(const Matrix3D &ma, const Matrix3D &mb)
+{
     return (
             Matrix3D(
                     ma(0, 0) + mb(0, 0), ma(0, 1) + mb(0, 1), ma(0, 2) + mb(0, 2),
@@ -46,7 +48,8 @@ inline Matrix3D operator+(const Matrix3D &ma, const Matrix3D &mb) {
     );
 }
 
-inline Matrix3D operator-(const Matrix3D &ma, const Matrix3D &mb) {
+inline Matrix3D operator-(const Matrix3D &ma, const Matrix3D &mb)
+{
     return (
             Matrix3D(
                     ma(0, 0) - mb(0, 0), ma(0, 1) - mb(0, 1), ma(0, 2) - mb(0, 2),
@@ -56,7 +59,8 @@ inline Matrix3D operator-(const Matrix3D &ma, const Matrix3D &mb) {
     );
 }
 
-inline Matrix3D operator*(const Matrix3D &M, float t) {
+inline Matrix3D operator*(const Matrix3D &M, float t)
+{
     return Matrix3D(
             M(0, 0) * t, M(0, 1) * t, M(0, 2) * t,
             M(1, 0) * t, M(1, 1) * t, M(1, 2) * t,
@@ -64,7 +68,8 @@ inline Matrix3D operator*(const Matrix3D &M, float t) {
     );
 }
 
-inline Matrix3D operator/(const Matrix3D &M, float t) {
+inline Matrix3D operator/(const Matrix3D &M, float t)
+{
     return Matrix3D(
             M(0, 0) / t, M(0, 1) / t, M(0, 2) / t,
             M(1, 0) / t, M(1, 1) / t, M(1, 2) / t,
@@ -72,7 +77,8 @@ inline Matrix3D operator/(const Matrix3D &M, float t) {
     );
 }
 
-inline Vector3D operator*(const Matrix3D &M, const Vector3D &v) {
+inline Vector3D operator*(const Matrix3D &M, const Vector3D &v)
+{
     return Vector3D(
             M(0, 0) * v.x + M(0, 1) * v.y + M(0, 2) * v.z,
             M(1, 0) * v.x + M(1, 1) * v.y + M(1, 2) * v.z,
@@ -80,7 +86,8 @@ inline Vector3D operator*(const Matrix3D &M, const Vector3D &v) {
     );
 }
 
-inline Matrix3D operator*(const Matrix3D &A, const Matrix3D &B) {
+inline Matrix3D operator*(const Matrix3D &A, const Matrix3D &B)
+{
     return Matrix3D(
             A(0, 0) * B(0, 0) + A(0, 1) * B(1, 0) + A(0, 2) * B(2, 0),
             A(0, 0) * B(0, 1) + A(0, 1) * B(1, 1) + A(0, 2) * B(2, 1),
@@ -94,7 +101,8 @@ inline Matrix3D operator*(const Matrix3D &A, const Matrix3D &B) {
     );
 }
 
-inline std::ostream &operator<<(std::ostream &stream, const Matrix3D &v) {
+inline std::ostream &operator<<(std::ostream &stream, const Matrix3D &v)
+{
     stream << v(0, 0) << ", " << v(0, 1) << ", " << v(0, 2) << std::endl;
     stream << v(1, 0) << ", " << v(1, 1) << ", " << v(1, 2) << std::endl;
     stream << v(2, 0) << ", " << v(2, 1) << ", " << v(2, 2) << std::endl;

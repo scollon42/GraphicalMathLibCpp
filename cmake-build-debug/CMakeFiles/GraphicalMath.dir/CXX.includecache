@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/Matrix3D.h
+sstream
+-
+Vector3D.h
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/Vector3D.h
+
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/Vector3D.h
+iosfwd
+-
+sstream
+-
+
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/main.cpp
+iostream
+-
+Vector3D.h
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/Vector3D.h
+Matrix3D.h
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/Matrix3D.h
+

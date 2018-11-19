@@ -6,11 +6,11 @@
 #include <cmath>
 
 Vector3D::Vector3D()
-    : x(0), y(0), z(0)
+        : x(0), y(0), z(0)
 {}
 
 Vector3D::Vector3D(float a, float b, float c)
-    : x(a), y(b), z(c)
+        : x(a), y(b), z(c)
 {}
 
 Vector3D::Vector3D(const Vector3D &v)
@@ -52,4 +52,19 @@ Vector3D &Vector3D::operator/=(const float &scalar)
 float Vector3D::magnitude() const
 {
     return (std::sqrt(x * x + y * y + z * z));
+}
+
+Vector3D &Vector3D::cross(const Vector3D &other)
+{
+    float nx, ny, nz;
+
+    nx = y * other.z - z * other.y;
+    ny = z * other.x - x * other.z;
+    nz = x * other.y - y * other.x;
+
+    x = nx;
+    y = ny;
+    z = nz;
+
+    return *this;
 }

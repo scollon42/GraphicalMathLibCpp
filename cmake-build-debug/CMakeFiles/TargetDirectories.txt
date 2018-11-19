@@ -1,0 +1,3 @@
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/cmake-build-debug/CMakeFiles/GraphicalMath.dir
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Sam/Documents/GitHub/projects/GraphicalMathLibCpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
